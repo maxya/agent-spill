@@ -1,2 +1,4 @@
-Tagline: "Find what your coding agent already spilled."
-About: "When you click 'Yes, and don't ask again' in Claude Code (or another coding agent), the full approved command — secrets included — gets saved into a settings file. agent-spill scans your own repos for those saved credentials: settings files, shell history, transcripts, and git history, across every agent folder. It runs entirely on your machine, never uploads anything, and never prints a secret — findings show a masked prefix and a length only."
+Find what your coding agent already spilled.
+
+When you click 'Yes, and don't ask again' in Claude Code (or another coding agent), the full approved command — secrets included — gets saved into a settings file. agent-spill scans your own repos for those saved credentials: settings files, shell history, transcripts, and git history, across every agent folder. It runs entirely on your machine, never uploads anything, and never prints a secret — findings show a masked prefix and a length only.
+
