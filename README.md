@@ -94,10 +94,10 @@ jobs:
   agent-spill:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with: { fetch-depth: 0 }          # history scan needs full clone
-      - uses: actions/setup-node@v4
-        with: { node-version: 22 }
+      - uses: actions/setup-node@v7
+        with: { node-version: 26 }
       - run: npx --yes agent-spill@0 --ci
 ```
 
