@@ -1,0 +1,68 @@
+name: Found a leak
+description: Report a real leak agent-spill found, without sharing the secret value.
+title: "[leak] "
+labels: ["leak-report"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. **Do not paste a secret value, a masked prefix, a fingerprint, or a file path that identifies you.** Counts and categories are enough.
+
+  - type: dropdown
+    id: agent
+    attributes:
+      label: Which agent?
+      options:
+        - Claude Code
+        - Cursor
+        - Gemini CLI
+        - Codex
+        - SpecStory
+        - Continue
+        - Aider
+        - Other / not sure
+    validations:
+      required: true
+
+  - type: dropdown
+    id: source
+    attributes:
+      label: Where was it?
+      options:
+        - Settings file
+        - Transcript / session log
+        - Git history
+        - MCP config
+        - Shell history
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: grade
+    attributes:
+      label: What grade did agent-spill report?
+      options:
+        - LOCAL
+        - AT-RISK
+        - COMMITTED
+        - PUSHED
+    validations:
+      required: true
+
+  - type: textarea
+    id: missed
+    attributes:
+      label: Anything we missed?
+      description: A rule that should exist, a false positive, a store we do not scan. Still no secret values.
+      placeholder: e.g. it found the password in the settings file but not in the transcript.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: no-secret
+    attributes:
+      label: Secret safety
+      options:
+        - label: I have not pasted any secret value (or any part of one).
+          required: true

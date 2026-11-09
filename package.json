@@ -1,0 +1,17 @@
+{
+  "name": "agent-spill",
+  "version": "0.1.0",
+  "description": "Find secrets your coding agents already saved — settings, transcripts, shell history and git history. Local-only; never prints a secret.",
+  "license": "MIT",
+  "type": "module",
+  "bin": { "agent-spill": "dist/cli.js" },
+  "files": ["dist", "README.md", "LICENSE"],
+  "engines": { "node": ">=22.13" },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "build:test": "tsc -p tsconfig.test.json",
+    "test": "npm run build:test && node --test --test-reporter=spec \"dist-test/**/*.test.js\"",
+    "check": "tsc -p tsconfig.json --noEmit && npm run build:test && node --test --test-reporter=spec \"dist-test/**/*.test.js\""
+  },
+  "devDependencies": { "typescript": "^5.6.0", "@types/node": "^22.10.0" }
+}

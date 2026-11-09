@@ -1,0 +1,8 @@
+node_modules/
+dist/
+dist-test/
+*.tgz
+.DS_Store
+
+agent-settings-leak-scanner-build-brief-2026-11-08.md
+ROADMAP.md
